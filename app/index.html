@@ -9,9 +9,11 @@
      <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Montserrat&family=Overpass:wght@600&family=Roboto:wght@700&family=Rubik:ital,wght@1,700&display=swap"
           rel="stylesheet">
     <title>TravelBlog</title>
+     <!-- <link rel="stylesheet" type="text/css" href="css/slick.css">
+     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
+<body id="body">
 
 <!-- start header -->
 
@@ -45,11 +47,11 @@
                     <div class="nav__logo__name">TravelBlog</div>
                </div>
                <div class="nav__item">
-                    <a class="nav__item__continent green" href="" style="color: #356C27;">Главная</a>
-                    <a class="nav__item__continent yellow" href="" style="color: #F0B74F;">Европа</a>
-                    <a class="nav__item__continent red" href="" style="color: #CE5B40;">Азия</a>
-                    <a class="nav__item__continent purpule" href="" style="color: #8846A3;">Африка</a>
-                    <a class="nav__item__continent blue" href="" style="color: #3478B1;">Южная Америка</a>
+                    <a class="nav__item__continent" href="#home" style="color: #356C27;">Главная</a>
+                    <a class="nav__item__continent" href="#euro" style="color: #F0B74F;">Европа</a>
+                    <a class="nav__item__continent" href="#azia" style="color: #CE5B40;">Азия</a>
+                    <a class="nav__item__continent" href="#africa" style="color: #8846A3;">Африка</a>
+                    <a class="nav__item__continent" href="#samerika" style="color: #3478B1;">Южная Америка</a>
                </div>
           </div>
      </div>
@@ -58,19 +60,26 @@
 <!-- end header -->
 
 <!-- start main -->
-
-<div class="main">
-     <div class="container">
-          <div class="main__bg">
-               <div class="main__bg__title">
-                    Не знаете где отдохнуть?
+<section class="main" id="body">
+     <div class="main__slider">
+          <div class="slider">
+               <!-- <div class="main__slider__img"><img src="images/slider/ночной.jpg" alt=""></div>
+               <div class="main__slider__img"><img src="images/slider/горы.jpg" alt=""></div>
+               <div class="main__slider__img"><img src="images/slider/озеро.jpg" alt=""></div>
+               <div class="main__slider__img"><img src="images/slider/город.jpg" alt=""></div> -->
+               <div class="container">
+               <div class="main__slider__bg">
+                    <div class="main__slider__bg__title">
+                         Не знаете где отдохнуть?
+                    </div>
+                    <div class="main__slider__bg__suptitle">
+                         Где отдохнуть за границей - (20) лучших направлений для путешествия всей семьей
+                    </div>
                </div>
-               <div class="main__bg__suptitle">
-                    Где отдохнуть за границей - (20) лучших направлений для путешествия всей семьей
                </div>
           </div>
      </div>
-</div>
+</section>
 
 <!-- end main -->
 
@@ -78,7 +87,7 @@
 
 <section class="section">
      <div class="container">
-          <div class="continent">Европа</div>
+          <div class="continent" id="euro">Европа</div>
           <div class="continent__info">
                <div class="city"><b>1. Испания - Мадрид</b></div>
                <div class="info"><p>В Мадрид, испанскую столицу, приезжают, чтобы посмотреть на картины великих в Золотом треугольнике, полюбоваться на
@@ -92,11 +101,62 @@
                </div>
                <img src="images/city/Мадрид.jpg" alt="" class="img__city">
           </div> 
+
+          <div class="continent__info">
+               <div class="city"><b>2. Франция - Париж</b></div>
+               <div class="info">
+                    <p>Париж - это город любви и света, столица моды и литературный рай, город тысячи обличий, который влюбляет в себя с
+                    первого взгляда. Этот город привлекает абсолютно всех: любителей моды и романтики, искусства и истории, архитектуры и еды. Здесь Вы
+                    найдете абсолютно все: музеи с мировым именем, самые модные магазины, интересные достопримечательности, уютные рестораны
+                    и самые романтичные места.</p>
+          
+                    <p>Париж прекрасен в любой сезон и любую погоду. Но всё же идеальным временем для посещения Парижа считается апрель-май и
+                    сентябрь-октябрь. В это время город обычно радует хорошей погодой и не таким большим количеством туристов. Самым высоким сезоном является июнь-июль и рождественские праздники. В августе туристов намного
+                    меньше, но нужно учесть, что в это время закрывается много заведений. Также очень мало туристов в ноябре, феврале и
+                    марте. В самые низкие сезоны путешествие в Париж обойдется дешевле.</p>
+               </div>
+               <img src="images/city/париж.jpg" alt="" class="img__city">
+          </div>
+
+          <div class="continent" id="azia">Азия</div>
+          <div class="continent__info">
+               <div class="city"><b>1. Индия - Мадрид</b></div>
+               <div class="info">
+                    <p>В Мадрид, испанскую столицу, приезжают, чтобы посмотреть на картины великих в Золотом треугольнике,
+                         полюбоваться на
+                         фонтаны в парке Ретиро, погулять по извилистым улочкам, взять пару уроков фламенко, совершать
+                         увлекательный шопинг —
+                         одного дня точно не хватит. Мадрид идеален для экскурсий, каждый его уголок хранит древние тайны или
+                         ждет, когда
+                         появятся новые. Из Мадрида удобно отправляться на экскурсии в Толедо, Сеговию и загородный дворец короля
+                         — Эскориал.</p>
+          
+                    <p>Приехать в Мадрид с детьми – решение смелое. Здесь нет ни моря, ни аквапарков, а есть только музеи и
+                         картинные галереи.
+                         И все же семейный отдых в Мадриде – решение мудрое. Художественные галереи испанской столицы входят в
+                         число
+                         знаменитейших музеев мира, а если уж очень захочется пляжных развлечений, добро пожаловать в парк
+                         «Мадридская река».</p>
+               </div>
+               <img src="images/city/Мадрид.jpg" alt="" class="img__city">
+          </div>
      </div>
 </section>
 
 <!-- end content -->
 
-    <script src="js/main.min.js"></script>
+<!-- start footer -->
+
+<footer class="footer">
+     <div class="container">
+          <div class="footer__copy">Copyright © 2022 Travelblog</div>
+               <a class="go-top" href="#body">в начало</a>
+     </div>
+</footer>
+
+<!-- end footer -->
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <script src="js/slick.min.js"></script> -->
+     <script src="js/main.min.js"></script>
 </body>
 </html>
