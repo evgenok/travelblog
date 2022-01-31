@@ -6,4 +6,14 @@ $(function () {
           top = $(id).offset().top;
           $('body, html').animate({scrollTop: top}, 1000);
      })
+
+
+     $('.slider').slick({
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true
+     });
 });
