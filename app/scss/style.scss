@@ -60,7 +60,7 @@
 }
 
 .main__slider{
-     width: 100%;
+     max-width: 100%;
      height: 450px;
      background: url('../images/main-bg.jpg') center no-repeat;
      // background-size: cover;
@@ -98,7 +98,7 @@
 
 
 .main__slider__img img{
-     width: 100%;
+     max-width: 100%;
      height: 450px;
 }
 
@@ -152,7 +152,7 @@
                margin-top: 30px;
           }
           .img__city{
-               width: 100%;
+               max-width: 100%;
                height: auto;
           }
      }
