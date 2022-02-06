@@ -4,66 +4,101 @@
 
 
 
-.header{
+.header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 10;
+     background-color: #fff;
+  &__container {
+     max-width: 1200px;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0px 30px;
      height: 70px;
-     background-color: $bg;
 }
-.nav__inner{
+  &__logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #005DB4;
+     z-index: 5;
+     font-family: 'Roboto';
+     font-weight: bold;
+     svg{
+          fill: #005DB4;
+     }
+  }
+  &__menu {
+
+  }
+}
+
+.menu {
+  &__icon {
+       display: none;
+  }
+  &__body {}
+  &__list {
      display: flex;
      justify-content: space-between;
      align-items: center;
-}
-.nav__logo{
-     color: #215586;
-     text-align: center;
-     @include f700;
-     font-size: 24px;
-     svg{
-          width: 72px;
-          height: 72px;
-          fill: #215586;
      }
-     &__name{
-          margin-top: -30px;
-     }
-}
-.nav__item{
-     display: flex;
-     align-items: center;
-     height: 35px;
-     a{
-          @include f700;
-          font-size: 18px;
-          margin-left: 25px;
-          transition: opacity 0.2s linear;
-          position: relative;
-          opacity: 0.7;
-     }
-     a:before{
-          content: "";
-          display: block;
-          width: 100%;
-          height: 2px;
+  &__list > li{
+       position: relative;
+       margin-left: 30px;
+       font-size: 24px;
+       font-family: 'Roboto';
+       font-weight: bold;
+  }
+  &__link:hover{
+       text-decoration: underline;
+  }
+  &__link {
+       color: #333;
+       font-size: 18px;
+  }
+  &__sublist > li{
+     margin-bottom: 10px;
+  }
 
-          background-color: #846767;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          z-index: 100;
-          opacity: 0.5;
-          transition: opacity .2s linear;
-     }
-     a:hover{
-          opacity: 1;
-     }
-     a:hover:before{
-          opacity: 0.5;
-     }
+&__sublist li:last-child{
+     margin-bottom: 0px;
+  }
+
+  &__sublist {
+       transition: opacity .3s linear;
+       visibility: hidden;
+       opacity: 0;
+       position: absolute;
+       top: 100%;
+       right: 0;
+       background-color: #333;
+       padding: 15px;
+       min-width: 200px;
+  }
+  &__sublink:hover{
+       text-decoration: underline;
+  }
+  &__sublink {
+       color: #fff;
+  }
 }
+
+body._pc .menu__list > li:hover .menu__sublist{
+     opacity: 1;
+     visibility: visible;
+     transform: translate(0px, 0px);
+     pointer-events: all;
+}
+
 .main{
      &__slider{
           height: 100%;
-          margin-top: 30px;
+          margin-top: 100px;
           img{
                max-width: 100%;
                height: auto;
@@ -93,6 +128,7 @@
 .section{
      margin-top: 50px;
      .continent{
+             padding-top: 50px;
           font-family: 'Manrope', sans-serif;
           font-size: 72px;
           font-weight: 400;
@@ -117,9 +153,10 @@
 }
 
 .footer{
-     height: 50px;
+     height: 55px;
      background-color: #424139;
      padding-top: 5px;
+     
      .container__footer{
           display: flex;
           align-items: center;
@@ -131,6 +168,7 @@
           color: $bg;
           flex: 1 1 auto;
           text-align: center;
+          line-height: 1;
     }
     &__top{
          a{

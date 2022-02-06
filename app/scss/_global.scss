@@ -1,4 +1,7 @@
-
+html{
+     --top-spacing: 100px;
+     scroll-padding-top: var(--top-spacing);
+}
 
 *,
 *::before,
@@ -27,6 +30,10 @@ body{
     background-color: $bg;
     margin: 0;
     padding: 0;
+}
+
+body._lock{
+     overflow: hidden;
 }
 
 .container{

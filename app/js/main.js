@@ -1,19 +1,68 @@
-$(function () {
-     $(".container a, .go-top").on("click", function (event) {
+"use strict"
 
-          event.preventDefault();
-          var id = $(this).attr('href'),
-          top = $(id).offset().top;
-          $('body, html').animate({scrollTop: top}, 1000);
+const isMobile = {
+     Android: function () {
+          return navigator.userAgent.match(/Android/i);
+     },
+     BlackBerry: function () {
+          return navigator.userAgent.match(/BlackBerry/i);
+     },
+     IOS: function () {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+     },
+     Opera: function () {
+          return navigator.userAgent.match(/Opera Mini/i);
+     },
+     Windows: function () {
+          return navigator.userAgent.match(/IEMobile/i);
+     },
+     any:function(){
+          return(
+               isMobile.Android() ||
+               isMobile.BlackBerry() ||
+               isMobile.IOS() ||
+               isMobile.Opera() ||
+               isMobile.Windows());    
+     }
+};
+
+if (isMobile.any()) {
+     document.body.classList.add('_touch');
+}
+     else{
+     document.body.classList.add('_pc');
+}
+
+
+
+// menu
+
+const iconMenu = document.querySelector('.menu__icon');
+const menuBody = document.querySelector('.menu__body');
+if (iconMenu){
+     
+     iconMenu.addEventListener("click", function (e) {
+          document.body.classList.toggle('_lock');
+          iconMenu.classList.toggle('_active');
+          menuBody.classList.toggle('_active');
+     });
+}
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+     anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+
+          const blockID = anchor.getAttribute('href').substr(1)
+
+          document.getElementById(blockID).scrollIntoView({
+               behavior: 'smooth',
+               block: 'start'
+          })
+          document.body.classList.remove('_lock');
+          iconMenu.classList.remove('_active');
+          menuBody.classList.remove('_active');
      })
 
-
-     $('.slider').slick({
-          dots: true,
-          infinite: true,
-          autoplay: true,
-          speed: 300,
-          slidesToShow: 1,
-          adaptiveHeight: true
-     });
-});
+}
